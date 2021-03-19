@@ -1,10 +1,30 @@
-import React, { Component } from "react";
-import { Provider } from "react-redux";
+import React, { Component } from 'react';
+import {Provider} from "react-redux"
 
-import store from "./store";
-import Home from "./Home";
+class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      news:[]
+    }
+    this.fetchData = this.fetchData.bind(this);
+  }
+  fetchData() {
 
-export default () =>
-  <Provider store={store}>
-    <Home />
-  </Provider>;
+  }
+  render() {
+    return (
+      <div>
+        <button onClick={this.fetchData}
+        >
+          fetch news
+        </button>
+        <div>
+          
+        </div>
+      </div>
+    )
+  }
+}
+
+export default App;
